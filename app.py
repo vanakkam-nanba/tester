@@ -24,5 +24,10 @@ def adder():
 def results():
    return "Results Here!"
 
+@app.route("/initialise")
+def initialiser():
+   os.system("python /app/initialise.py")
+   return "sucess !!"
+
 if __name__ == "__main__":
   app.run(port=8000)
