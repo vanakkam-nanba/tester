@@ -3,7 +3,6 @@
   "description": "An Automated Recon Framework",
   "repository": "https://github.com/gokulapap/Reconator",
   "keywords": ["python", "recon", "automation"],
-    "name": "WhatsAsenaDuplicated",
     "website":   "https://t.me/phaticusthiccy",
     "success_url": "https://t.me/AsenaSupport",
     "env": {
