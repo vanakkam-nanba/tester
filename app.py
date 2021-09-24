@@ -27,7 +27,7 @@ def results():
 @app.route('/test', defaults={'req_path': ''})
 @app.route('/test/<path:req_path>')
 def dir_listing(req_path):
-    BASE_DIR = '/Users/vivek/Desktop'
+    BASE_DIR = '/app/results'
 
     # Joining the base and the requested path
     abs_path = os.path.join(BASE_DIR, req_path)
