@@ -3,9 +3,9 @@
   "description": "An Automated Recon Framework",
   "repository": "https://github.com/gokulapap/Reconator",
   "keywords": ["python", "recon", "automation"],
-    "website":   "https://t.me/phaticusthiccy",
-    "success_url": "https://t.me/AsenaSupport",
-    "env": {
+  "website": "https://t.me/phaticusthiccy",
+  "success_url": "https://t.me/AsenaSupport",
+  "env": {
         "TELEBOT_APIKEY": {
             "description": "go to botfather",
             "required": true
@@ -17,5 +17,5 @@
     },
     "addons": [{
       "plan": "heroku-postgresql"
-    }],
-  }
+    }]
+}
