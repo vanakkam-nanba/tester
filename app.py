@@ -14,7 +14,7 @@ def home():
 def adder():
  if request.method == "POST":
   url = request.form.get('url')
-  f = open('domains.txt','a')
+  f = open('/app/domains.txt','a')
   f.write(url)
   f.write("\n")
   f.close()
