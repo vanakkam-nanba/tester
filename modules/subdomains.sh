@@ -13,13 +13,13 @@ curl -s "https://jldc.me/anubis/subdomains/$url" | grep -Po "((http|https):\/\/)
 curl -s "https://sonar.omnisint.io/subdomains/$url" | cut -d "[" -f1 | cut -d "]" -f1 | cut -d "\"" -f 2 > sub8
 
 
-echo "2) SUBDOMAINS :" >> ../results/$url/output.txt
-printf "\n\n" >> results/$url/output.txt
+echo "2) SUBDOMAINS :" >> /app/results/$url/output.txt
+printf "\n\n" >> /app/results/$url/output.txt
 
-sort sub1 sub2 sub3 sub4 sub5 sub6 sub7 sub8 | uniq | tee -a ../results/$url/output.txt
+sort sub1 sub2 sub3 sub4 sub5 sub6 sub7 sub8 | uniq | tee -a /app/results/$url/output.txt
 rm sub*
 
-printf "\n\n" >> results/$url/output.txt
-printf "############################################################" >> ../results/$url/output.txt
-printf "\n\n" >> results/$url/output.txt
+printf "\n\n" >> /app/results/$url/output.txt
+printf "############################################################" >> /app/results/$url/output.txt
+printf "\n\n" >> /app/results/$url/output.txt
 
