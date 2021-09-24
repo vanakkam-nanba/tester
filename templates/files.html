@@ -1,0 +1,11 @@
+<h1>!! Recon Results !!</h1>
+<br><br>
+<ul>
+    {% for file in files %}
+    <li>
+        <a href="{{ (request.path + '/' if request.path != '/' else '') + file }}">
+            {{ file }}
+        </a>
+    </li>
+    {% endfor %}
+</ul>
