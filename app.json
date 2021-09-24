@@ -6,11 +6,11 @@
   "website": "https://t.me/phaticusthiccy",
   "success_url": "https://t.me/AsenaSupport",
   "env": {
-        "TELEBOT_APIKEY": {
+        "API_KEY": {
             "description": "go to botfather",
             "required": true
         },
-        "TELEGRAM_CHAT_ID": {
+        "CHAT_ID": {
             "description": "your telegram chat id",
             "required": true
         }
