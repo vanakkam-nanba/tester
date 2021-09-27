@@ -49,25 +49,6 @@ def initialiser():
    os.system("python /app/initialise.py")
    return "sucess !!"
 
-@app.route("/new")
-def new():
-   f = open("/app/templates/temp.html", "w")
-   f.write('''
-<h1>!! Recon Results !!</h1>
-<br><br>
-<ul>
-    {% for file in files %}
-    <li>
-        <a href="{{ (request.path + '/' if request.path != '/' else '') + file }}">
-            {{ file }}
-        </a>
-    </li>
-    {% endfor %}
-</ul>
-''')
-   f.close()
-   return render_template("temp.html")
-
 
 if __name__ == "__main__":
   app.run(port=8000, debug=True)
