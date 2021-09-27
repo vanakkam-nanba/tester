@@ -3,7 +3,7 @@
 
 url=$1
 
-/app/modules/binaries/subfinder -d $url -silent > sub1
+/app/modules/binaries/subfinder -silent -d $url > sub1
 
 curl -s "https://crt.sh/?q=$url" | grep "<TD>" | grep $url | cut -d ">" -f2 | cut -d "<" -f1 | sort -u | sed '/^*/d' > sub3
 curl -s "https://rapiddns.io/subdomain/$url#result" | grep "<td><a" | cut -d '"' -f 2 | grep http | cut -d '/' -f3 | sort -u > sub4
