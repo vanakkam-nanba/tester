@@ -1,4 +1,4 @@
-# python dump.py {domain}
+# python insert.py {domain}
 
 import os
 import sys
@@ -26,7 +26,7 @@ if url in doms:
 
 else:
   #read from output.txt and dump in database
-  f = open('/app/results/{}/output.txt'.format(url), 'r')
+  f = open('results/{}-output.txt'.format(url), 'r')
   res = f.read()
   f.close()
 
