@@ -45,6 +45,27 @@ def check_queue():
 
   return str
 
+@app.route("/scanned")
+def scanned():
+  str = '<h1>Scanned Targets are</h1><br><ul>'
+  DATABASE_URL = os.environ['DATABASE_URL']
+  conn = psycopg2.connect(DATABASE_URL, sslmode='require')
+  cur = conn.cursor()
+  cur.execute("select domain from output")
+  t = cur.fetchall()
+  for i in t:
+    str = str + f"<li> <a href='/output/{}'>{}</a>".format(i[0], i[0])
+  str = str + "</ul>"
+  conn.commit()
+  cur.close()
+  conn.close()
+
+@app.route("/output/<url>")
+def output():
+  url = url
+  os.system(f"python retrieve.py {url}")
+  return send_file("/app/results/{}-output.txt".format(url))
+
 @app.route("/initialise")
 def initialise():
   os.system('python initialise.py')
