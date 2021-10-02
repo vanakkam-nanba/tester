@@ -59,6 +59,7 @@ def scanned():
   conn.commit()
   cur.close()
   conn.close()
+  return str
 
 @app.route("/output/<url>")
 def output():
