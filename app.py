@@ -30,7 +30,7 @@ def adder():
 
 @app.route("/queue")
 def check_queue():
-  str = '<h1>Targets in queue are</h1><br><br><ul>'
+  str = '<h1>Targets in queue are</h1><br><ul>'
   DATABASE_URL = os.environ['DATABASE_URL']
   conn = psycopg2.connect(DATABASE_URL, sslmode='require')
   cur = conn.cursor()
