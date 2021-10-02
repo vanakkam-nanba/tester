@@ -29,6 +29,11 @@ result varchar(10000000)
 
 ''')
 conn.commit()
+cur.close()
+conn.close()
+
+conn = psycopg2.connect(DATABASE_URL, sslmode='require')
+cur = conn.cursor()
 
 # to save targets in queue
 cur.execute('''
@@ -42,6 +47,5 @@ target varchar(50) NOT NULL
 
 ''')
 conn.commit()
-
 cur.close()
 conn.close()
