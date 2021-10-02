@@ -1,5 +1,6 @@
 # sends test notification
 # creates a db table
+
 import os
 import sys
 import psycopg2
@@ -16,6 +17,7 @@ bot.send_message(CHAT_ID, "Test Message from Reconator !")
 conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 cur = conn.cursor()
 
+# to save the result of recon on target
 cur.execute('''
 
 create table output (
@@ -26,7 +28,20 @@ result varchar(10000000)
 );
 
 ''')
-
 conn.commit()
+
+# to save targets in queue
+cur.execute('''
+
+create table queue (
+
+id varchar(5) SERIAL PRIMARY KEY,
+target varchar(50) NOT NULL
+
+);
+
+''')
+conn.commit()
+
 cur.close()
 conn.close()
