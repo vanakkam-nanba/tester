@@ -18,7 +18,7 @@ printf "\n\n" >> /app/results/$url-output.txt
 
 sort /app/sub1 | uniq | tee -a /app/results/$url-output.txt
 
-printf "\n\n" >> /app/results/$url-output.txt
-printf "############################################################" >> /app/results/$url-output.txt
-printf "\n\n" >> /app/results/$url-output.txt
-
+printf "\n\n\n" >> /app/results/$url-output.txt
+printf "######################################################################" >> /app/results/$url-output.txt
+printf "######################################################################" >> /app/results/$url-output.txt
+printf "\n\n\n" >> /app/results/$url-output.txt
