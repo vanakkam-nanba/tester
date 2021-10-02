@@ -69,7 +69,7 @@ def output(url):
   conn = psycopg2.connect(DATABASE_URL, sslmode='require')
   cur = conn.cursor()
 
-  cur.execute(f"select result from output where domain = {url}")
+  cur.execute(f"select result from output where domain = '{url}'")
   t = cur.fetchall()
 
   res = t[0][0]
