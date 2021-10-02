@@ -45,6 +45,11 @@ def check_queue():
 
   return str
 
+@app.route("/initialise")
+def initialise():
+  os.system('python initialise.py')
+  return 'Initialised sucessfully ! test notification sent \/'
+
 @app.route("/results")
 def results():
    return "Results Here!"
