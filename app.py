@@ -20,7 +20,7 @@ def adder():
   conn = psycopg2.connect(DATABASE_URL, sslmode='require')
   cur = conn.cursor()
 
-  cur.execute(f"insert into queue ('target',) values ('{url}')")
+  cur.execute(f"insert into queue (target) values ('{url}')")
   conn.commit()
 
   cur.close()
