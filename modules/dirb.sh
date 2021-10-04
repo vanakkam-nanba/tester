@@ -8,7 +8,7 @@ furl=$(python3 -c "import requests; t = requests.head('$furl', allow_redirects=T
 echo "5) DIRECTORY BRUTE" >> /app/results/${url}-output.txt
 printf "\n\n" >> /app/results/${url}-output.txt
 
-/app/modules/binaries/gobuster dir -q -w /app/modules/wordlists/big.txt -t 65 -u $furl | tee -a /app/results/${url}-output.txt
+/app/modules/binaries/gobuster dir -q -w /app/modules/wordlists/common.txt -t 65 -u $furl | tee -a /app/results/${url}-output.txt
 
 printf "\n\n\n" >> /app/results/$url-output.txt
 printf "######################################################################" >> /app/results/$url-output.txt
