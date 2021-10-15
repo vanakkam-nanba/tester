@@ -27,7 +27,7 @@ def adder():
   cur.close()
   conn.close()
 
-  return render_template("index.html", data="Added to queue !")
+  return render_template("index.html", info="Added to queue !")
 
 @app.route("/queue")
 def check_queue():
