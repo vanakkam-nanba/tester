@@ -691,9 +691,9 @@ font-size:10px;
         <i class="fas fa-bars"></i>
       </label>
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="/">Home</a></li>
         <li><a href="#">About</a></li>
-        <li><a href="queue.html">Queue</a></li>
+        <li><a href="queue">Queue</a></li>
         <li><a class="active" href="#">Scanned</a></li>
         <li><a href="#">Issues</a></li>
       </ul>
