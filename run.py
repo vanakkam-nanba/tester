@@ -13,6 +13,9 @@ os.system("chmod 777 /app/* -R")
 
 bot.send_message(chat_id, f"Recon started for {url} !")
 
+#0_index_of_results
+os.system(f"bash modules/index.sh {url}")
+
 #1_dnscan
 os.system(f"bash modules/dnscan.sh {url}")
 
@@ -22,17 +25,29 @@ os.system(f"python modules/clickjacking {url}")
 #3_corstest
 os.system(f"python modules/corstest {url}")
 
-#4_subdomain_enumeration
+#4_firwall_detection
+os.system(f"bash modules/firewall.sh {url}")
+
+#5_davtest
+os.system(f"bash modules/davtest.sh {url}")
+
+#6_robots_check
+os.system(f"bash modules/robots.sh {url}")
+
+#7_subdomain_enumeration
 os.system(f"bash modules/subdomains.sh {url}")
 
-#5_dirbrute
+#8_dirbrute
 os.system(f"bash modules/dirb.sh {url}")
 
-#6_urls_gather
+#9_js+link_finder
+os.system(f"bash modules/js-finder.sh {url}")
+
+#urls_gather
 os.system(f"bash modules/gather_urls.sh {url}")
 
 ###########################################################
 
-bot.send_message(chat_id, f"Recon for {url} is completed ! you can check the results now on website !")
+bot.send_message(chat_id, f"Recon for {url} is completed ! you can check the results now on website at path /scanned !")
 #dumping to database with insert.py
 os.system('python insert.py {}'.format(url))
