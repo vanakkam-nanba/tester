@@ -10,7 +10,7 @@ curl -s "https://riddler.io/search/exportcsv?q=pld:$url" | grep -Po "(([\w.-]*)\
 curl -s "https://jldc.me/anubis/subdomains/$url" | grep -Po "((http|https):\/\/)?(([\w.-]*)\.([\w]*)\.([A-z]))\w+" | cut -d "/" -f3 > /app/sub4
 
 
-echo "4) SUBDOMAINS" >> /app/results/$url-output.txt
+echo "7) SUBDOMAINS" >> /app/results/$url-output.txt
 printf "\n\n" >> /app/results/$url-output.txt
 
 sort /app/sub1 /app/sub2 /app/sub3 /app/sub4 | uniq | tee /app/subs
