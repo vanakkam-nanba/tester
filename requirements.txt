@@ -5,3 +5,4 @@ psycopg2-binary
 pyTelegramBotAPI
 pybase64
 flask_autoindex
+wafw00f
