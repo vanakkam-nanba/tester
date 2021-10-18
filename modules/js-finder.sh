@@ -7,7 +7,7 @@ furl=http://$url
 
 furl=$(python3 -c "import requests; t = requests.head('$furl', allow_redirects=True).url; print(t)")
 
-echo "8) JS FINDER + LINK FINDER" >> /app/results/${url}-output.txt
+echo "9) JS FINDER + LINK FINDER" >> /app/results/${url}-output.txt
 printf "\n\n" >> /app/results/${url}-output.txt
 
 printf "JS FINDER :\n\n" >> /app/results/${url}-output.txt
