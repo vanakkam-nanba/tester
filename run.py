@@ -43,8 +43,18 @@ os.system(f"bash modules/dirb.sh {url}")
 #9_js+link_finder
 os.system(f"bash modules/js-finder.sh {url}")
 
+#10_subdomain_takeover
+os.system(f"bash modules/subtake.sh {url}")
+
+#11_subdomains_title_cname
+os.system(f"bash modules/sub_title_cname.sh {url}")
+
+#12_subdomains_ip_server
+os.system(f"bash modules/sub_ip_server.sh {url}")
+
 #urls_gather
 os.system(f"bash modules/gather_urls.sh {url}")
+
 
 ###########################################################
 
