@@ -52,9 +52,17 @@ os.system(f"bash modules/sub_title_cname.sh {url}")
 #12_subdomains_ip_server
 os.system(f"bash modules/sub_ip_server.sh {url}")
 
+#13_whois_lookup
+os.system(f"bash modules/whois.sh {url}")
+
+#14_shcheck
+os.system(f"bash modules/shcheck.sh {url}")
+
+#15_wappalyzer_cli
+os.system(f"bash modules/wappy.sh {url}")
+
 #urls_gather
 os.system(f"bash modules/gather_urls.sh {url}")
-
 
 ###########################################################
 
