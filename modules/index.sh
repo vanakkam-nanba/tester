@@ -24,6 +24,6 @@ printf "14 - SECURITY HEADERS CHECK\n" >> /app/results/$url-output.txt
 printf "15 - WEB TECHNOLOGIES\n" >> /app/results/$url-output.txt
 
 printf "\n\n\n" >> /app/results/$url-output.txt
-printf "######################################################################\n" >> /app/results/$url-output.txt
-printf "######################################################################" >> /app/results/$url-output.txt
+printf "##########################################################################################\n" >> /app/results/$url-output.txt
+printf "##########################################################################################" >> /app/results/$url-output.txt
 printf "\n\n\n" >> /app/results/$url-output.txt
